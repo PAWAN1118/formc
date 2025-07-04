@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stylish Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .form-container {
+      background: #fff;
+      padding: 30px 35px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+    label {
+      margin-top: 15px;
+      display: block;
+      color: #444;
+      font-weight: 500;
+    }
+    input[type="text"], input[type="email"], input[type="date"], input[type="tel"],
+    select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #4facfe;
+      outline: none;
+      box-shadow: 0 0 5px #4facfe55;
+    }
+    .inline-group {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .inline-group label {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+    }
+    .inline-group input {
+      margin-right: 6px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .buttons {
+      text-align: center;
+      margin-top: 25px;
+    }
+    .buttons input {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: background 0.3s ease;
+    }
+    .submit-btn { background: #28a745; }
+    .reset-btn { background: #dc3545; }
+    .submit-btn:hover { background: #218838; }
+    .reset-btn:hover { background: #c82333; }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Student Registration</h2>
+  <form>
+    <label>First Name:</label>
+    <input type="text" required>
+
+    <label>Last Name:</label>
+    <input type="text" required>
+
+    <label>Email:</label>
+    <input type="email" required>
+
+    <label>Date of Birth:</label>
+    <input type="date">
+
+    <label>Gender:</label>
+    <div class="inline-group">
+      <label><input type="radio" name="gender"> Male</label>
+      <label><input type="radio" name="gender"> Female</label>
+    </div>
+
+    <label>Phone:</label>
+    <input type="tel" pattern="[0-9]{10}" required>
+
+    <label>Course:</label>
+    <select>
+      <option>B.Tech</option>
+      <option>M.Tech</option>
+      <option>BCA</option>
+      <option>MCA</option>
+    </select>
+
+    <label>Skills:</label>
+    <div class="inline-group">
+      <label><input type="checkbox"> C</label>
+      <label><input type="checkbox"> Java</label>
+      <label><input type="checkbox"> Python</label>
+      <label><input type="checkbox"> SQL</label>
+    </div>
+
+    <label>Address:</label>
+    <textarea rows="3" required></textarea>
+
+    <div class="buttons">
+      <input type="submit" value="Submit" class="submit-btn">
+      <input type="reset" value="Reset" class="reset-btn">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
